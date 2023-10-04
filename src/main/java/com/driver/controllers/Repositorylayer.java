@@ -57,7 +57,7 @@ public class Repositorylayer {
        int total=0;
        for(Integer flight:FightPassengerMap.keySet()){
           Flight fObj= flightMap.get(flight);
-          if(fObj.getFlightDate()==date && (fObj.getToCity()==city ||fObj.getFromCity()==city)){
+          if(fObj.getFlightDate().equals(date) && (fObj.getToCity().equals(city) ||fObj.getFromCity().equals(city))){
               total+=FightPassengerMap.get(flight).size();
           }
        }
