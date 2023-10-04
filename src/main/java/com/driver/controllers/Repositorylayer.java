@@ -92,7 +92,7 @@ public class Repositorylayer {
        List<Integer> pList=FightPassengerMap.getOrDefault(flightId,new ArrayList<>());
        List<Integer> FList=PassengerFlightMap.getOrDefault(PassengerId,new ArrayList<>());
        Flight flight=flightMap.get(flightId);
-       if(pList.size()==flight.getMaxCapacity()){
+       if(pList.size()==flight.getMaxCapacity() || pList.contains(PassengerId)){
            return "FAILURE";
        }
        pList.add(PassengerId);
