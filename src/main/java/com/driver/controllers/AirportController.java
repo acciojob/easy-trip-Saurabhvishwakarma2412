@@ -18,8 +18,7 @@ import java.util.Objects;
 @RestController
 public class AirportController {
 
-    @Autowired
-    public Servicelayer serviceObj;
+    Servicelayer serviceObj=new Servicelayer();
     @PostMapping("/add_airport")
     public String addAirport(@RequestBody Airport airport){
 

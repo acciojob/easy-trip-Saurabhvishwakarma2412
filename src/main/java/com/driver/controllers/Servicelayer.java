@@ -12,8 +12,7 @@ import org.springframework.stereotype.Service;
 @Service
 public class Servicelayer {
 
-    @Autowired
-    public Repositorylayer repoObj;
+    Repositorylayer repoObj=new Repositorylayer();
 
     public String addAirport(Airport airport){
         return repoObj.addAirport(airport);
