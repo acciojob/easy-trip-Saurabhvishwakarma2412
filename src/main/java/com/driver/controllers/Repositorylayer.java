@@ -50,6 +50,9 @@ public class Repositorylayer {
        return Flist.size();
    }
    public int getNumberOfPeopleOn(Date date,String airportname){
+       if(airportMap.containsKey(airportname)==false){
+           return 0;
+       }
        City city=airportMap.get(airportname).getCity();
        int total=0;
        for(Integer flight:FightPassengerMap.keySet()){
